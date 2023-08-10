@@ -1,0 +1,7 @@
+.Weeklyforecast .btn {
+  border: none;
+  border-radius: 20px;
+  background-color: #01004e;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
