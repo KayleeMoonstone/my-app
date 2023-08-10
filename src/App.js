@@ -1,11 +1,21 @@
+import React from "react";
 import "./App.css";
+
+import Background from "./Background";
+
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hi</h1>
-      </header>
+      <div className="container">
+        <Background />
+        <div className="row">
+          <div className="col-md-8"></div>
+          <div className="col-md-4 text-right"></div>
+        </div>
+      </div>
     </div>
   );
 }
