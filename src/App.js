@@ -30,7 +30,8 @@ function App() {
           </div>
         </div>
         <footer>
-          <a href="">Open-source</a> code by Kabelo Molebalwa
+          <a href="https://github.com/KayleeMoonstone/my-app">Open-source</a>{" "}
+          code by Kabelo Molebalwa
         </footer>
       </div>
     </div>
