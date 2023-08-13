@@ -19,13 +19,13 @@ function App() {
     <div className="App">
       <div className="container">
         <Background />
-        <SearchEngine />
         <div className="row">
           <div className="col-md-8">
             <City />
             <Dailyforecast />
           </div>
           <div className="col-md-4 text-right">
+            <SearchEngine />
             <Weeklyforecast />
           </div>
         </div>
