@@ -30,7 +30,13 @@ function App() {
           </div>
         </div>
         <footer>
-          <a href="https://github.com/KayleeMoonstone/my-app">Open-source</a>{" "}
+          <a
+            href="https://github.com/KayleeMoonstone/my-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open-source
+          </a>{" "}
           code by Kabelo Molebalwa
         </footer>
       </div>
