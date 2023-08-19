@@ -1,0 +1,11 @@
+.dailyForecast {
+  margin-left: 15px;
+}
+
+.title {
+  font-style: italic;
+}
+
+.value {
+  font-size: 17px;
+}

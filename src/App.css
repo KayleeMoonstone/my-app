@@ -2,6 +2,7 @@
   display: block;
   margin: 8px;
 }
+
 .container {
   background: linear-gradient(
     181deg,
@@ -19,13 +20,20 @@
 h1 {
   margin-bottom: 5px;
 }
+
 h2 {
   font-size: 55px;
   margin: 23px;
 }
+
 p {
   margin-top: 0;
 }
+
 strong {
   font-size: 18px;
+}
+
+footer {
+  font-size: 12px;
 }
