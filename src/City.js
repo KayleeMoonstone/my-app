@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function City({ weatherData }) {
   if (!weatherData) {
-    return <div>No weather data available</div>;
+    return <div>Please search a city</div>;
   }
 
   const formattedDate = new Date().toLocaleString("en-UK", {
@@ -41,9 +41,7 @@ export default function City({ weatherData }) {
         <img src={weatherData.weatherIcon} alt="Weather Icon" />
         <span id="maxTemp">{weatherData.maxTemperature}</span> |
         <span id="minTemp">{weatherData.minTemperature}</span>
-        <button type="submit" id="degreeButton">
-          °C
-        </button>
+        <span id="degreeSign">°C</span>
       </h2>
     </div>
   );

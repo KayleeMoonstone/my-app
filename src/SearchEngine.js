@@ -41,9 +41,6 @@ export default function SearchEngine({ setWeatherData }) {
   return (
     <div className="Searchbar">
       <form onSubmit={handleSubmit} id="searchBar">
-        <button type="submit" id="searchButton">
-          <FontAwesomeIcon icon="fa-solid fa-magnifying-glass-location" />
-        </button>
         <input
           id="search"
           type="text"
@@ -52,8 +49,8 @@ export default function SearchEngine({ setWeatherData }) {
           autoComplete="off"
           placeholder="Search City"
         />
-        <button type="submit" id="homeButton">
-          <FontAwesomeIcon icon="fa-solid fa-house" />
+        <button type="submit" id="searchButton">
+          <FontAwesomeIcon icon="fa-solid fa-magnifying-glass-location" />
         </button>
       </form>
     </div>
