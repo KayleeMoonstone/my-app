@@ -8,6 +8,7 @@ h1 span {
   background-size: cover;
   opacity: 70%;
   margin-left: 10px;
+  margin-right: 10px;
   box-shadow: 4px 4px 15px #01002e;
   border-radius: 20px;
   transform: scale(1.03) perspective(200px);

@@ -8,6 +8,19 @@ export default function City({ weatherData }) {
     return <div>No weather data available</div>;
   }
 
+  const formattedDate = new Date().toLocaleString("en-UK", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+
+  const formattedTime = new Date().toLocaleString("en-UK", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
+
   return (
     <div className="City">
       <h1 id="city">
@@ -18,8 +31,8 @@ export default function City({ weatherData }) {
       </h1>
       <p>
         <strong id="currentDateTime">
-          <span id="currentDate">Saturday, 3 June 2023</span> &nbsp;
-          <span id="currentTime">11:24</span>
+          <span id="currentDate">{formattedDate}</span> &nbsp;
+          <span id="currentTime">{formattedTime}</span>
         </strong>
         <br />
         <span id="weatherDescription">{weatherData.weatherDescription}</span>
