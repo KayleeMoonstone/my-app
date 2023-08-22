@@ -15,7 +15,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(fas);
 
 export default function App() {
-  const [cityName, setCityName] = useState("");
+  const [weatherData, setWeatherData] = useState(null);
 
   return (
     <div className="app">
@@ -23,11 +23,11 @@ export default function App() {
       <div className="container">
         <div className="row">
           <div className="col-md-5">
-            <City cityName={cityName} />
+            <City weatherData={weatherData} />
           </div>
           <div className="col-md-7 text-right">
-            <SearchEngine setCityName={setCityName} />
-            <DailyForecast cityName={cityName} />
+            <SearchEngine setWeatherData={setWeatherData} />
+            <DailyForecast weatherData={weatherData} />
           </div>
         </div>
         <footer>
