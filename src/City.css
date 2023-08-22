@@ -3,6 +3,7 @@
   background-position: center;
   background-size: cover;
   opacity: 70%;
+  margin-left: 10px;
   box-shadow: 4px 4px 15px #01002e;
   border-radius: 20px;
   transform: scale(1.03) perspective(200px);
@@ -15,14 +16,25 @@
   opacity: 90%;
 }
 
-#city,
-#currentDateTime,
+#city {
+  padding: 20px;
+  font-size: 35px;
+  text-align: center;
+}
+
+#currentDateTime {
+  padding-left: 20px;
+  font-size: 17px;
+}
+
 #currentTemp {
-  margin-left: 20px;
+  padding: 20px;
+  font-size: 65px;
+  text-align: center;
 }
 
 #weatherDescription {
-  font-size: 17px;
+  font-size: 13px;
   margin-left: 20px;
 }
 

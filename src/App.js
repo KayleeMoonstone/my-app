@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+
 import Background from "./Background";
+import SearchEngine from "./SearchEngine";
 import City from "./City";
 import DailyForecast from "./DailyForecast";
 
@@ -9,22 +11,23 @@ import "bootstrap/dist/js/bootstrap.js";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import SearchEngine from "./SearchEngine";
 
 library.add(fas);
 
 export default function App() {
+  const [cityName, setCityName] = useState("");
+
   return (
     <div className="app">
       <Background />
       <div className="container">
         <div className="row">
           <div className="col-md-5">
-            <City />
+            <City cityName={cityName} />
           </div>
           <div className="col-md-7 text-right">
-            <SearchEngine />
-            <DailyForecast />
+            <SearchEngine setCityName={setCityName} />
+            <DailyForecast cityName={cityName} />
           </div>
         </div>
         <footer>
