@@ -1,3 +1,28 @@
 .weeklyforecast {
-  list-style: none;
+  text-align: center;
+  margin: 40px auto;
+  box-shadow: 4px 4px 15px #01002e;
+  border-radius: 10px;
+}
+
+.weeklyforecast .col {
+  padding: 15px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.weeklyforecast .col:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #01002e;
+  border-radius: 100px;
+  box-shadow: 4px 4px 15px #01002e;
+}
+
+.maxTemp,
+.minTemp {
+  font-size: 14px;
+}
+.minTemp {
+  opacity: 80%;
 }

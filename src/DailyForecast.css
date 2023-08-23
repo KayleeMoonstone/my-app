@@ -1,11 +1,14 @@
 .dailyForecast {
-  margin-left: 15px;
+  padding: 25px 35px;
 }
 
 .title {
   font-style: italic;
+  font-weight: 600;
 }
 
 .value {
   font-size: 17px;
+  float: right;
+  opacity: 80%;
 }

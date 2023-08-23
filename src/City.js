@@ -31,7 +31,7 @@ export default function City({ weatherData }) {
       </h1>
       <p>
         <strong id="currentDateTime">
-          <span id="currentDate">{formattedDate}</span> &nbsp;
+          <span id="currentDate">{formattedDate}</span> <br />
           <span id="currentTime">{formattedTime}</span>
         </strong>
         <br />

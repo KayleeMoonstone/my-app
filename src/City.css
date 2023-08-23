@@ -2,6 +2,10 @@ h1 span {
   font-size: 15px;
 }
 
+img {
+  max-width: 50%;
+}
+
 .City {
   background: url("./media/thebeach.jpg");
   background-position: center;
@@ -27,20 +31,31 @@ h1 span {
   text-align: center;
 }
 
-#currentDateTime {
+#currentDate {
   padding-left: 20px;
-  font-size: 15px;
+  font-size: 14px;
+}
+
+#currentTime {
+  padding-left: 20px;
+  font-size: 14px;
+  opacity: 70%;
 }
 
 #currentTemp {
   padding: 20px;
-  font-size: 65px;
+  font-size: 45px;
   text-align: center;
 }
 
+#minTemp {
+  opacity: 80%;
+}
+
 #weatherDescription {
-  font-size: 13px;
+  font-size: 14px;
   margin-left: 20px;
+  font-style: italic;
 }
 
 #degreeSign {

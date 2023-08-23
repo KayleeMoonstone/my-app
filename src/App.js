@@ -5,6 +5,7 @@ import Background from "./Background";
 import SearchEngine from "./SearchEngine";
 import City from "./City";
 import DailyForecast from "./DailyForecast";
+import WeeklyForecast from "./WeeklyForecast";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
@@ -28,6 +29,7 @@ export default function App() {
           <div className="col-md-7 text-right">
             <SearchEngine setWeatherData={setWeatherData} />
             <DailyForecast weatherData={weatherData} />
+            <WeeklyForecast />
           </div>
         </div>
         <footer>
