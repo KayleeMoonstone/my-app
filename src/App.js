@@ -29,7 +29,7 @@ export default function App() {
           <div className="col-md-7 text-right">
             <SearchEngine setWeatherData={setWeatherData} />
             <DailyForecast weatherData={weatherData} />
-            <WeeklyForecast />
+            <WeeklyForecast weatherData={weatherData} />
           </div>
         </div>
         <footer>

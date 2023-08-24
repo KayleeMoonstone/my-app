@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./SearchEngine.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,12 +9,13 @@ export default function SearchEngine({ setWeatherData }) {
 
   const fetchWeatherData = async () => {
     try {
-      const response = await fetch(
+      const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=97c2f6a3b34509ac62090edc5d18d949&units=metric`
       );
       if (response.ok) {
         const data = await response.json();
         const weatherData = {
+          coordinates: data.coord,
           cityName: data.name,
           weatherDescription: data.weather[0].description,
           weatherIcon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,

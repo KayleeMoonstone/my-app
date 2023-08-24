@@ -38,7 +38,9 @@ export default function City({ weatherData }) {
         <span id="weatherDescription">{weatherData.weatherDescription}</span>
       </p>
       <h2 id="currentTemp">
-        <img src={weatherData.weatherIcon} alt="Weather Icon" />
+        <div>
+          <img src={weatherData.weatherIcon} alt="Weather Icon" />
+        </div>
         <span id="maxTemp">{weatherData.maxTemperature}</span> |
         <span id="minTemp">{weatherData.minTemperature}</span>
         <span id="degreeSign">°C</span>
