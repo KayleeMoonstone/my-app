@@ -26,3 +26,9 @@
 .minTemp {
   opacity: 80%;
 }
+
+.forecastIcon {
+  display: block;
+  margin: 0 auto;
+  max-width: 30%;
+}

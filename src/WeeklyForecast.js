@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./WeeklyForecast.css";
+import WeeklyForecastDay from "./WeeklyForecastDay";
 
 export default function WeeklyForecast({ weatherData }) {
+  const [forecast, setForecast] = useState(null);
+
   useEffect(() => {
     if (weatherData) {
       const longitude = weatherData.coordinates.lon;
@@ -15,7 +18,7 @@ export default function WeeklyForecast({ weatherData }) {
   }, [weatherData]);
 
   function handleResponse(response) {
-    console.log(response.data);
+    setForecast(response.data.daily);
   }
 
   function handleError(error) {
@@ -25,17 +28,7 @@ export default function WeeklyForecast({ weatherData }) {
     <div className="weeklyforecast">
       <div className="row">
         <div className="col">
-          <strong>
-            <div className="forecastIcon"></div>
-            <img
-              src={`https://openweathermap.org/img/wn/${weatherData.weatherIcon}@2x.png`}
-              alt={weatherData.weatherIconAlt}
-            />
-            <span>Sun</span>
-          </strong>{" "}
-          <br />
-          <span className="maxTemp">25°</span> |{" "}
-          <span className="minTemp">11°</span>{" "}
+          <WeeklyForecastDay data={forecast[0]} />
         </div>
       </div>
     </div>
