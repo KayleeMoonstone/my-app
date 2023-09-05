@@ -10,7 +10,7 @@ export default function WeeklyForecast({ weatherData }) {
     if (weatherData) {
       const longitude = weatherData.coordinates.lon;
       const latitude = weatherData.coordinates.lat;
-      const apiKey = "3bc520cc14bbdedfd7e45158f2ef0439";
+      const apiKey = "f5029b784306910c19746e40c14d6cd3";
       const apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
       axios.get(apiUrl).then(handleResponse).catch(handleError);
@@ -19,7 +19,6 @@ export default function WeeklyForecast({ weatherData }) {
 
   function handleResponse(response) {
     setForecast(response.data.daily);
-    console.log(response.data.daily);
   }
 
   function handleError(error) {
@@ -29,16 +28,16 @@ export default function WeeklyForecast({ weatherData }) {
     <div className="weeklyforecast">
       <div className="row">
         <div className="col">
-          <WeeklyForecastDay data={forecast[1]} />
+          {forecast && <WeeklyForecastDay data={forecast[1]} />}
         </div>
         <div className="col">
-          <WeeklyForecastDay data={forecast[2]} />
+          {forecast && <WeeklyForecastDay data={forecast[2]} />}
         </div>
         <div className="col">
-          <WeeklyForecastDay data={forecast[3]} />
+          {forecast && <WeeklyForecastDay data={forecast[3]} />}
         </div>
         <div className="col">
-          <WeeklyForecastDay data={forecast[4]} />
+          {forecast && <WeeklyForecastDay data={forecast[4]} />}
         </div>
       </div>
     </div>

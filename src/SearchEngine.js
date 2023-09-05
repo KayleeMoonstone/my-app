@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function SearchEngine({ setWeatherData }) {
   const [cityName, setCityName] = useState("");
 
-  const apiKey = "3bc520cc14bbdedfd7e45158f2ef0439";
+  const apiKey = "f5029b784306910c19746e40c14d6cd3";
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
   const fetchWeatherData = async () => {
