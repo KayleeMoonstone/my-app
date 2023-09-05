@@ -19,6 +19,7 @@ export default function WeeklyForecast({ weatherData }) {
 
   function handleResponse(response) {
     setForecast(response.data.daily);
+    console.log(response.data.daily);
   }
 
   function handleError(error) {
@@ -28,7 +29,16 @@ export default function WeeklyForecast({ weatherData }) {
     <div className="weeklyforecast">
       <div className="row">
         <div className="col">
-          <WeeklyForecastDay data={forecast[0]} />
+          <WeeklyForecastDay data={forecast[1]} />
+        </div>
+        <div className="col">
+          <WeeklyForecastDay data={forecast[2]} />
+        </div>
+        <div className="col">
+          <WeeklyForecastDay data={forecast[3]} />
+        </div>
+        <div className="col">
+          <WeeklyForecastDay data={forecast[4]} />
         </div>
       </div>
     </div>
