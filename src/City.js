@@ -1,11 +1,12 @@
 import React from "react";
+
 import "./City.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function City({ weatherData }) {
   if (!weatherData) {
-    return <div>Please search a city</div>;
+    return null;
   }
 
   const formattedDate = new Date().toLocaleString("en-UK", {
@@ -39,7 +40,10 @@ export default function City({ weatherData }) {
       </p>
       <h2 id="currentTemp">
         <div>
-          <img src={weatherData.weatherIcon} alt="Weather Icon" />
+          <img
+            src={`https://openweathermap.org/img/wn/${weatherData.weatherIcon}@2x.png`}
+            alt={weatherData.weatherIconAlt}
+          />
         </div>
         <span id="maxTemp">{weatherData.maxTemperature}</span> |
         <span id="minTemp">{weatherData.minTemperature}</span>

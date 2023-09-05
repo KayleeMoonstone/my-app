@@ -3,9 +3,8 @@ import "./DailyForecast.css";
 
 export default function DailyForecast({ weatherData }) {
   if (!weatherData) {
-    return <div>No weather data available</div>;
+    return <div>No data available</div>;
   }
-
   return (
     <div className="dailyForecast">
       <div className="row">
